@@ -23,7 +23,7 @@ export class TopicMessagingTopicService {
       `[sessionNotificationConsumer] headers:`,
       context.properties.headers,
     );
-    // Shouled receive 'routing.task.unlock.pump'
+    // Shouled start with 'routing.event.pap.session.'
     const validRoutingKey = BINDINGS.PAP_TO_WSS.EVENTS[0].ROUTING_KEY.slice(
       0,
       -1,
