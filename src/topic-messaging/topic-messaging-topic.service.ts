@@ -37,9 +37,9 @@ export class TopicMessagingTopicService {
   }
 
   @RabbitSubscribe({
-    exchange: BINDINGS.PAP_TO_WSS.EVENTS[0].EXCHANGE,
-    queue: BINDINGS.PAP_TO_WSS.EVENTS[0].QUEUE, // event.pap.session.updated
-    routingKey: BINDINGS.PAP_TO_WSS.EVENTS[0].ROUTING_KEY, // routing.event.pap.session.#
+    exchange: BINDINGS.PAP_TO_WSS.EVENTS[1].EXCHANGE,
+    queue: BINDINGS.PAP_TO_WSS.EVENTS[1].QUEUE, // event.pap.session.updated
+    routingKey: BINDINGS.PAP_TO_WSS.EVENTS[1].ROUTING_KEY, // routing.event.pap.session.#
     createQueueIfNotExists: true,
   })
   public async eventStoreConsumer(
